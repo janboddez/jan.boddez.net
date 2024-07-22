@@ -1,0 +1,166 @@
+/*
+Theme Name:  jan.boddez.net
+Author:      Jan Boddez
+Author URI:  https://jan.boddez.net/
+Template:    indielol
+Version:     0.2.9
+License:     GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: indielol
+*/
+
+:where(.wp-site-blocks) > footer {
+	background-color: #fff;
+	margin-block-start: 0 !important;
+}
+
+.activitypub-remote-reply__button {
+	font-size: inherit !important;
+}
+
+.wpcf7 form .wpcf7-text,
+.wpcf7 form .wpcf7-textarea,
+.wpcf7 form .wpcf7-submit {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	padding: 0.5rem;
+}
+
+.wpcf7 form .wpcf7-text,
+.wpcf7 form .wpcf7-textarea {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: var(--wp--preset--spacing--30) 0;
+	padding: 1rem;
+}
+
+.wp-block-search__label {
+	display: block;
+	color: var(--wp--preset--color--tertiary);
+	font-family: var(--wp--preset--font-family--recursive-sn-csl-st) !important;
+	font-size: var(--wp--preset--font-size--medium) !important;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-block-end: 1.5rem;
+}
+
+@media (min-width: 1224px) {
+	.wp-block-query .type-page.has-post-thumbnail,
+	.wp-block-query .type-post.has-post-thumbnail {
+		margin-inline: calc(-1 * var(--wp--preset--spacing--60))
+	}
+
+	.wp-block-query .type-page.has-post-thumbnail > .wp-block-group,
+	.wp-block-query .type-post.has-post-thumbnail > .wp-block-group {
+		background: var(--wp--preset--color--base);
+		margin-block-start: calc(-0.94 * var(--wp--preset--spacing--80));
+		margin-inline: var(--wp--preset--spacing--60);
+		padding-block-start: var(--wp--preset--spacing--40);
+		padding-inline: var(--wp--preset--spacing--40);
+		position: relative;
+		z-index: 10;
+	}
+}
+
+@media (min-width: 1224px) {
+	.wp-block-table-of-contents,
+	#table-of-contents {
+		margin-inline-end: calc(-1 * var(--wp--preset--spacing--60));
+	}
+}
+
+.wp-block-table-of-contents li,
+#table-of-contents li li {
+	margin-inline-start: var(--wp--preset--spacing--30);
+}
+
+/* Force a maximum preview card width of `550px` or, on smaller screens, `100%`. */
+.wp-block-indieblocks-link-preview:not(.alignfull) {
+	margin-inline: auto;
+	max-width: min(550px, 100%) !important;
+}
+
+/* On smallish screens, hide the center column(s), and allow the first column to expand horizontally if the last column is empty. */
+@media (max-width: 781px) {
+	.wp-block-columns.post-meta .wp-block-column:not(:first-child):not(:last-child),
+	.wp-block-janboddez-post-meta .wp-block-columns .wp-block-column:not(:first-child):not(:last-child) {
+		display: none;
+	}
+
+	.wp-block-columns.post-meta .wp-block-column:empty {
+		display: none;
+	}
+}
+
+/* @todo: Move these to parent theme? */
+.entry-content > pre {
+	overflow-x: auto;
+	padding: var(--wp--preset--spacing--30);
+}
+
+/* For consistency with WP core's Quote block. */
+blockquote {
+	background-color: #eee;
+	margin: var(--wp--preset--spacing--30) 0;
+	padding: calc(0.875 * var(--wp--preset--spacing--40)) var(--wp--preset--spacing--40);
+}
+
+blockquote > :last-child:last-child {
+  margin-block-end: 0;
+
+}
+
+blockquote > :first-child:first-child {
+	margin-block-start: 0;
+}
+
+.entry-content a {
+	/* Break long links to prevent horizontal scrollbars. */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.wp-block-janboddez-post-meta.alignright,
+.wp-block-indieblocks-syndication.alignright {
+	margin-inline-start: auto;
+	margin-inline-end: 0;
+	text-align: right;
+}
+
+#blogroll li {
+	list-style: none;
+}
+
+#blogroll a {
+	text-decoration: none !important;
+}
+
+#blogroll a span {
+	text-decoration: underline !important;
+}
+
+#blogroll a img {
+	width: 1.125em;
+	height: auto;
+	border-radius: 50%;
+	position: relative;
+	top: 0.1875em;
+}
+
+#blogroll h3 {
+	margin-block: 1em 0.5em;
+}
+
+@media (min-width: 600px) {
+	#blogroll .linkcat ul {
+		columns: 2 auto;
+	}
+}
+
+.contact-form label span {
+	margin-inline-start: 0.3em;
+}
