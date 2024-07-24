@@ -1,35 +1,6 @@
 {
 	"settings": {
 		"appearanceTools": true,
-		"color": {
-			"palette": [
-				{
-					"color": "#fff",
-					"name": "Base",
-					"slug": "base"
-				},
-				{
-					"color": "#111",
-					"name": "Contrast",
-					"slug": "contrast"
-				},
-				{
-					"color": "#044bd9",
-					"name": "Primary",
-					"slug": "primary"
-				},
-				{
-					"color": "#f2836b",
-					"name": "Secondary",
-					"slug": "secondary"
-				},
-				{
-					"color": "#666",
-					"name": "Tertiary",
-					"slug": "tertiary"
-				}
-			]
-		},
 		"layout": {
 			"contentSize": "900px"
 		}
@@ -37,26 +8,7 @@
 	"styles": {
 		"blocks": {
 			"core/site-title": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|recursive-sn-csl-st",
-					"fontWeight": "700"
-				},
 				"css": "& a {\n\tcolor: var(--wp--preset--color--contrast);\n}"
-			},
-			"core/post-content": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|merriweather"
-				}
-			},
-			"core/post-excerpt": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|merriweather"
-				}
-			},
-			"core/comment-content": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|merriweather"
-				}
 			},
 			"indieblocks/on-this-day-content": {
 				"css": "& > ul > li {\n\tbackground-color: #f5f5f5;\n\tpadding: calc(1.25 * var(--wp--preset--spacing--30));\n}\n\n& li {\n\tmargin-block-start: var(--wp--preset--spacing--30);\n}\n\n& p {\n\tmargin-block-end: calc(0.5 * var(--wp--preset--spacing--20));\n}"
@@ -64,19 +16,8 @@
 			"tabor/dark-mode-toggle": {
 				"css": "& {\n\tline-height: 1;\n}"
 			}
-		},
-		"elements": {
-			"heading": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|recursive-sn-csl-st",
-					"fontWeight": "700"
-				}
-			}
-		},
-		"typography": {
-			"fontFamily": "var:preset|font-family|inter"
 		}
 	},
-	"version": 2,
+	"version": 3,
 	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }
