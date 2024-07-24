@@ -14,10 +14,10 @@ if ( ! empty( $shortlink ) ) {
 }
 
 // (Strip tags and) shorten.
-$content  = wp_trim_words( $content, 25, ' […]' ); // Also strips all HTML.
+$content = wp_trim_words( $content, 25, ' […]' ); // Also strips all HTML.
 // Prepend the title.
-$content  = '<p><strong>' . get_the_title( $post ) . '</strong></p><p>' . $content . '</p>';
+$content = '<p><strong>' . get_the_title( $post ) . '</strong></p><p>' . $content . '</p>';
 // Append a permalink.
-$content .= '<p>(<a href="' . esc_url( $permalink ) . '">' . esc_html( $permalink ) . '</a>)</p>';
+$content .= '<p><a href="' . esc_url( $permalink ) . '">' . esc_html( $permalink ) . '</a></p>';
 
 echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
